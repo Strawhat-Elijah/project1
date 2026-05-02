@@ -1,16 +1,15 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from logic import GradeManagerController
+from logic import Logic
  
  
 def main() -> None:
     """Launch the Student Grade Manager application."""
-    app = QApplication(sys.argv)
-    controller = GradeManagerController()
-    controller.show()
-    sys.exit(app.exec())
+    application = QApplication(sys.argv)
+    window = Logic()
+    window.show()
+    application.exec()
  
  
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
- 
